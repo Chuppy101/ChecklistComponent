@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+:root {
+	--circle-circumference: 370;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #1e1e1e;
+	margin: 0;
+}
+
+.checklist {
+	width: 743px;
+	height: 91px;
+	background: #3579f5;
+	border-radius: 10px;
+	position: absolute;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.progress-circle {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 16px;
+	left: 22px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.circle-bg {
+	fill: none;
+	stroke: rgba(255, 255, 255, 0.5);
+	stroke-width: 1;
+}
+
+.circle {
+	fill: none;
+	stroke: #ffffff;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-dasharray: var(--circle-circumference);
+	stroke-dashoffset: calc(var(--circle-circumference) * (1 - var(--progress)));
+	transform: rotate(-90deg);
+	transform-origin: 50% 50%;
+	/* Заранее добавим анимацию */
+	transition: stroke-dashoffset 0.35s;
+}
+
+.progress-text {
+	width: 32px;
+	height: 30px;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 30px;
+	color: #ffffff;
+	z-index: 1;
+	text-align: center;
+	position: absolute;
+}
+
+.details {
+	position: absolute;
+	top: 34px;
+	left: 98px;
+	width: 211px;
+	height: 20px;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 20px;
+	color: #ffffff;
+}
+
+.next-action {
+	position: absolute;
+	top: 58px;
+	left: 98px;
+	width: 389px;
+	height: 18px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	color: #ffffff;
+}
+
+.label {
+	width: 76px;
+	height: 18px;
+	background: #2364db;
+	border-radius: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 12px;
+	left: 98px;
+}
+
+.label-text {
+	width: 50px;
+	height: 18px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.button {
+	width: 170px;
+	height: 40px;
+	background: #f4f8ff;
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	position: absolute;
+	top: 26px;
+	left: 555px;
+}
+
+.button-text {
+	width: 120px;
+	height: 20px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #4777ed;
+	text-align: center;
+}
