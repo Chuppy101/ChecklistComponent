@@ -11,6 +11,7 @@
 ```html
 <div class="progress-circle" style="--progress: 0.75"></div>
 ```
+Заполняет шкалу прогресса на 75%
 
 ## Как скачать и запустить
 
